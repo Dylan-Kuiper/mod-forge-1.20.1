@@ -1,3 +1,7 @@
 {
-  "item.destinymod.sapphire": "Sapphire"
+  "item.destinymod.sapphire": "Sapphire",
+  "item.destinymod.raw_sapphire": "Raw Sapphire",
+  "item.destinymod.ore_detector": "Ore Detector",
+
+  "creativetab.tutorial_tab": "Destiny's tab"
 }

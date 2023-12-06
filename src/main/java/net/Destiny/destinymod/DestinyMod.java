@@ -1,6 +1,7 @@
 package net.Destiny.destinymod;
 
 import com.mojang.logging.LogUtils;
+import net.Destiny.destinymod.item.ModCreativeModeTabs;
 import net.Destiny.destinymod.item.Moditems;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -27,6 +28,8 @@ public class DestinyMod
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModCreativeModeTabs.register(modEventBus);
+
         Moditems.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
@@ -43,6 +46,7 @@ public class DestinyMod
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
             event.accept(Moditems.SAPPHIRE);
+            event.accept(Moditems.RAW_SAPPHIRE);
         }
     }
 
