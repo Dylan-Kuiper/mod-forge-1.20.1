@@ -3,7 +3,6 @@ package net.Destiny.destinymod;
 import com.mojang.logging.LogUtils;
 import net.Destiny.destinymod.item.ModCreativeModeTabs;
 import net.Destiny.destinymod.item.Moditems;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -36,7 +35,7 @@ public class DestinyMod
 
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
-     }
+    }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
 
@@ -47,6 +46,7 @@ public class DestinyMod
         if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
             event.accept(Moditems.SAPPHIRE);
             event.accept(Moditems.RAW_SAPPHIRE);
+            event.accept(Moditems.ORE_DETECTOR);
         }
     }
 
