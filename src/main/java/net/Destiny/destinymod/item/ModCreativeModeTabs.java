@@ -20,6 +20,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(Moditems.RAW_SAPPHIRE.get());
                         pOutput.accept(Moditems.SAPPHIRE.get());
                         pOutput.accept(Moditems.ORE_DETECTOR.get());
+                        pOutput.accept(Moditems.STRAWBERRY.get());
                     })
                     .build());
 
