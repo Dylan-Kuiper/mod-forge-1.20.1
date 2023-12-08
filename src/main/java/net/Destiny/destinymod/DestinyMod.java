@@ -1,9 +1,9 @@
 package net.Destiny.destinymod;
 
 import com.mojang.logging.LogUtils;
+import net.Destiny.destinymod.effect.ModEffects;
 import net.Destiny.destinymod.item.ModCreativeModeTabs;
 import net.Destiny.destinymod.item.Moditems;
-import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -30,6 +30,8 @@ public class DestinyMod
         ModCreativeModeTabs.register(modEventBus);
 
         Moditems.register(modEventBus);
+
+        ModEffects.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
