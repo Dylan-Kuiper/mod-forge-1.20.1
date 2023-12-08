@@ -1,6 +1,9 @@
 package net.Destiny.destinymod;
 
 import com.mojang.logging.LogUtils;
+import net.Destiny.destinymod.item.ModCreativeModeTabs;
+import net.Destiny.destinymod.item.Moditems;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -17,20 +20,22 @@ import org.slf4j.Logger;
 @Mod(DestinyMod.MOD_ID)
 public class DestinyMod
 {
-    // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "destinymod";
-    // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public DestinyMod()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModCreativeModeTabs.register(modEventBus);
+
+        Moditems.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
-     }
+    }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
 
