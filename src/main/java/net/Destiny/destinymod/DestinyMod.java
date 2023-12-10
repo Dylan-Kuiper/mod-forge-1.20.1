@@ -2,6 +2,7 @@ package net.Destiny.destinymod;
 
 import com.mojang.logging.LogUtils;
 import net.Destiny.destinymod.effect.ModEffects;
+import net.Destiny.destinymod.enchantment.ModEnchantments;
 import net.Destiny.destinymod.item.ModCreativeModeTabs;
 import net.Destiny.destinymod.item.Moditems;
 import net.minecraftforge.api.distmarker.Dist;
@@ -30,6 +31,8 @@ public class DestinyMod
         ModCreativeModeTabs.register(modEventBus);
 
         Moditems.register(modEventBus);
+
+        ModEnchantments.register(modEventBus);
 
         ModEffects.register(modEventBus);
 

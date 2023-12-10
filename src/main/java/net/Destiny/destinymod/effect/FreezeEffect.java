@@ -26,7 +26,7 @@ public class FreezeEffect extends MobEffect {
 
             if (!playerInitialPositions.containsKey(playerId)) {
                 // Store the initial position only when the effect is applied for this player
-                Vec3 initialPosition = new Vec3(pLivingEntity.getX(), pLivingEntity.getY(), pLivingEntity.getZ());
+                Vec3 initialPosition = pLivingEntity.position();
                 playerInitialPositions.put(playerId, initialPosition);
 
                 // Log initial coordinates
