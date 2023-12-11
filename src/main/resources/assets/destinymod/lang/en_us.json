@@ -3,6 +3,12 @@
   "item.destinymod.raw_sapphire": "Raw Sapphire",
   "item.destinymod.ore_detector": "Ore Detector",
   "item.destinymod.strawberry": "Strawberry",
+  "item.destinymod.sapphire_staff": "Sapphire Staff",
+
+  "enchantment.destinymod.lightning_striker": "Lightning Striker",
+  "enchantment.destinymod.bite": "Bite",
+
+  "effect.destinymod.freeze": "Freeze",
 
   "creativetab.tutorial_tab": "Destiny's tab"
 }
