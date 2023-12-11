@@ -18,7 +18,11 @@ public class ModEnchantments {
                 () -> new LightningStrikerEnchantment(Enchantment.Rarity.COMMON, EnchantmentCategory.WEAPON,
                         EquipmentSlot.MAINHAND));
 
-    public static void register(IEventBus eventBus) {
+    public static final  RegistryObject<Enchantment> BITE =
+            ENCHANTMENTS.register("bite",
+                    () -> new BiteEnchantment(Enchantment.Rarity.COMMON, EnchantmentCategory.WEAPON,
+                            EquipmentSlot.MAINHAND));
+   public static void register(IEventBus eventBus) {
         ENCHANTMENTS.register(eventBus);
     }
 }
